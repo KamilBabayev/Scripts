@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 # This script will connect to central bank site and 
-# get new USD currency for today
+# get new  currency values for today
 
 import re
 from bs4 import BeautifulSoup
