@@ -11,6 +11,8 @@ from time import gmtime, strftime
 url = 'http://cbar.az'
 url_read = urllib.request.urlopen(url)
 soup = BeautifulSoup(url_read, 'lxml')
+#soup.ul.li.a.next  # Example traversing
+
 time = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 with open('note.txt', 'at') as f:
     f.write(time)
