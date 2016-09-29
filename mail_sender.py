@@ -27,7 +27,7 @@ if __name__ == "__main__":
 	msg['From'] = sender
 	msg['To'] = to
 
-	text = MIMEText(text, 'text')
+	text = MIMEText(text, 'text')	#check   'plain'
 	msg.attach(text)
 
 	server=smtplib.SMTP('smtp.mail.ru:587')
