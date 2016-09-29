@@ -42,6 +42,7 @@ if __name__ == "__main__":
 
 
 # Function for using as a module from other scripts
+# from mail_sender import send_mail     - import like this and use from your scripts
 def send_mail(sender,password,to,msg):
 	' sender must be email-address,password - string , to - email-address, msg - text to send '
 	server=smtplib.SMTP('smtp.mail.ru:587')
