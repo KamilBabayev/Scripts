@@ -36,7 +36,8 @@ if __name__ == "__main__":
 	server.starttls()
 	server.login(sender,password)
 	print("Successfully authenticated to server")
-	server.sendmail(sender,to,msg.as_string())
+	server.sendmail(sender,to,'Subject: SOOOLONG\n Dear Alice, welcome')				#msg.as_string())
+	#server.sendmail(sender,to, 'Subject: So long.\nDear Friend, so long and thanks for all the fish. Sincerely,me')   # this will send subect and body separately
 	print("mail has been sent")
 	server.close()
 
