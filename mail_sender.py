@@ -12,8 +12,8 @@ from getpass import getpass
 
 
 if __name__ == "__main__":
-	sender=input("Enter credentials to auth from smtp server, email: ")
-	password=getpass()
+	sender=input("Enter credentials to auth from smtp server, email: ")		# Imrove this part convery to function 
+	password=getpass()														# and use function under this if
 	to=input("Enter recipient email: ")
 	subject="Welcome"
 	text = '''I am happy to inform you that we have plenty of matter
