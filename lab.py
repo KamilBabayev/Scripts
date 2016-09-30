@@ -17,11 +17,11 @@ class Demo:
 # when we write  obj.name  - obj.get_name is called, when we do obj.name = "Ka New"
 # obj.set_name('Ka New') is called 
 
-inst1 = Demo("Admin Mark")
-print(inst1.name)
+inst1 = Demo("Old User")
 print(inst1.get_name())
-inst1.name = "David David"
-print(inst1.name)
+inst1.set_name("New User")
+print(inst1.get_name())
+
 
 
 
