@@ -22,12 +22,20 @@ print(inst1.get_name())
 inst1.set_name("New User")
 print(inst1.get_name())
 
-
-
-
-
-
-
+# Other method is using decorators  @property -for getter, @name.setter -for setter
+print('setter getter with decorator method')
+class Demo:
+    def __init__(self, input_name):
+        self.hidden_name = input_name
+    @property
+	def get_name(self):
+        print('inside the getter')
+        return self.hidden_name
+	@name.setter
+    def set_name(self, input_name):
+        print('inside the setter')
+        self.hidden_name = input_name
+    name = property(get_name, set_name)  
 
 
 
