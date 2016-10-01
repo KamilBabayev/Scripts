@@ -24,24 +24,40 @@ print(inst1.get_name())
 
 # Other method is using decorators  @property -for getter, @name.setter -for setter
 print('setter getter with decorator method')
-class Demo:
-    def __init__(self, input_name):
-        self.hidden_name = input_name
-    @property
-	def get_name(self):
-        print('inside the getter')
-        return self.hidden_name
+class NewClass:
+	def __init__(self, input_name):
+		self.hidden_name = input_name
+	@property
+	def name(self):
+		print('inside the getter decorator')
+		return self.hidden_name
 	@name.setter
-    def set_name(self, input_name):
-        print('inside the setter')
-        self.hidden_name = input_name
-    name = property(get_name, set_name)  
+	def name(self, input_name):
+		print('inside the setter decorator')
+		self.hidden_name = input_name
+
+print(' decorator method ' )
+inst2 = NewClass("DemoNAme")
+print(inst2.name)
+inst2.name = "Newest User"
+print(inst2.name)
 
 
+print('----------------------')
+class Circle():
+	def __init__(self,radius):
+		self.radius=radius
+	@property
+	def diameter(self):
+		return 2 * self.radius
+
+c = Circle(5)
+print(c.radius)
+print(c.diameter)
 
 ###################################################################
 #   Classes, Inheritance
-print (20* '--')
+print(20* '--')
 print('Classes part\n')
 
 class Father:
