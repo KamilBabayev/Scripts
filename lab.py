@@ -95,3 +95,11 @@ inst3.name = "Denis Smareonko"
 print(inst3.name)
 print('secret')				   # But in reality you could reach it via tricky way like	
 print(inst3._NewClass2__name)  # here.  instname._ClassName__hidden_attr_name
+
+
+
+######   Method Types.  attributes and methods.  self inside method shows object.
+# when we create object from Class the object is passed as a first argument to method 
+# as a self. so argument enters as argument to in self's position.(1st argument).So self 
+# represents object. Inside class code  @classmethod  decorator shows that next method 
+# under it is method od class. First argument(parameter) of method is class itself.This arg# -ument is named cls like self.
