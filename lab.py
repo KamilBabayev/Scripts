@@ -71,3 +71,24 @@ class Son(Father):
 
 user1 = Son("Kamil", "Babayev")
 print(user1.name, user1.sname)
+
+
+#############################################
+# Python provides way to restrict attribute access.The name of these  attributes must startwith 2 underlines. (ex:  __attr1,  self.__attr2)
+class NewClass2:
+    def __init__(self, input_name):
+        self.__name = input_name
+    @property
+    def name(self):
+        print('inside the getter')
+        return self.__name
+    @name.setter
+    def name(self, input_name):
+        print('inside the setter')
+        self.__name = input_name
+
+print(20*'-')
+inst3 = NewClass2("John Bratt")
+#print(inst3.__name)	-  will print that inst3 has not attribute __name, but is has
+print(inst3.name)
+inst3.name = "Denis Smareonko"
