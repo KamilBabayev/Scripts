@@ -92,3 +92,6 @@ inst3 = NewClass2("John Bratt")
 #print(inst3.__name)	-  will print that inst3 has not attribute __name, but is has
 print(inst3.name)		# we do not access attr directly, we get and set value via methods
 inst3.name = "Denis Smareonko"
+print(inst3.name)
+print('secret')				   # But in reality you could reach it via tricky way like	
+print(inst3._NewClass2__name)  # here.  instname._ClassName__hidden_attr_name
