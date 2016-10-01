@@ -102,4 +102,16 @@ print(inst3._NewClass2__name)  # here.  instname._ClassName__hidden_attr_name
 # when we create object from Class the object is passed as a first argument to method 
 # as a self. so argument enters as argument to in self's position.(1st argument).So self 
 # represents object. Inside class code  @classmethod  decorator shows that next method 
-# under it is method od class. First argument(parameter) of method is class itself.This arg# -ument is named cls like self.
+# under it is method od class. First argument(parameter) of method is class itself.This arg# -ument is named cls like self. Let us create class method which will count number of 
+# created instances.
+
+Class AB():
+	count = 0
+	def __init__(self):
+		A.count += 1
+	def exclaim(self):
+		print('I am AB')
+	@classmethod
+	
+
+
