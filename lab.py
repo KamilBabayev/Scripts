@@ -131,3 +131,45 @@ class Walmart:
 	def commercial():
 		print('This service is provided by Walart')
 Walmart.commercial()		# Notice that we must not create object in order use method.
+
+class Quote():
+    def  __init__(self,person,words):
+        self.person = person
+        self.words = words
+    def who(self):
+        return self.person
+    def says(self):
+        return self.words + '.'
+
+class QuestionQuote(Quote):			# as you see we could get access to self.words
+    def says(self):					# func from this child funcs
+        return self.words + '?'
+
+class ExclamationQuote(Quote):		# As you see 3 different version of say func,
+    def says(self):					# makes 3 diff class behave differently, this is polymorfism.
+        return self.words + '!'
+
+hunter = Quote('Elmer Fudd', 'I am hunting wabbits')
+print(hunter.who(), 'says:', hunter.says())
+hunted1 = QuestionQuote('Bugs Bunny', "What's up, doc")
+print(hunted1.who(), 'says:', hunted1.says())
+hunted2 = ExclamationQuote('Daffy Duck', 'It is rabbit season')
+print(hunted2.who(), 'says:', hunted2.says())
+
+# Python went more deeper and povides more options. Any  object can use who() and says() when includes
+class BabblingBrook():
+	def who(self):
+		return 'Brook'
+	def says(self):
+		return 'Babble'
+
+brook = BabblingBrook()
+
+def who_says(obj):		# This is a func just take obj as argument and runs its methods.
+	print(obj.who(), 'says', obj.says())
+print(20*'-')
+who_says(hunter)		# This is duck typing
+who_says(hunted1)
+who_says(hunted2)
+who_says(brook)
+
