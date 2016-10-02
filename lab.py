@@ -133,21 +133,21 @@ class Walmart:
 Walmart.commercial()		# Notice that we must not create object in order use method.
 
 class Quote():
-    def  __init__(self,person,words):
-        self.person = person
-        self.words = words
-    def who(self):
-        return self.person
-    def says(self):
-        return self.words + '.'
+	def  __init__(self,person,words):
+		self.person = person
+		self.words = words
+	def who(self):
+		return self.person
+	def says(self):
+		return self.words + '.'
 
 class QuestionQuote(Quote):			# as you see we could get access to self.words
-    def says(self):					# func from this child funcs
-        return self.words + '?'
+	def says(self):					# func from this child funcs
+		return self.words + '?'
 
 class ExclamationQuote(Quote):		# As you see 3 different version of say func,
-    def says(self):					# makes 3 diff class behave differently, this is polymorfism.
-        return self.words + '!'
+	def says(self):					# makes 3 diff class behave differently, this is polymorfism.
+		return self.words + '!'
 
 hunter = Quote('Elmer Fudd', 'I am hunting wabbits')
 print(hunter.who(), 'says:', hunter.says())
