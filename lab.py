@@ -173,3 +173,19 @@ who_says(hunted1)
 who_says(hunted2)
 who_says(brook)
 
+# Special Methods	-  a = 3 + 8   where this numbers know how to realize + or a knows =  ?
+# we can use this operators using special magic methods. they start with 2 unerlines and 
+# ends same.  __method__. we already know __init__
+# Example we have Word class and we want to wrte method which will compare word case-insens form
+
+class Word():
+	def __init__(self, text):
+		self.text = text
+	def equals(self,word2):
+		return self.text.lower() == word2.text.lower()
+
+first = Word('ha')
+second = Word('HA')
+third = Word('eh')
+print(first.equals(second))
+print(first.equals(third))
