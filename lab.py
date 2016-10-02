@@ -121,3 +121,13 @@ obj1=AB()
 obj2=AB()
 obj3=AB()
 print(AB.insts())
+
+# Third type of method does not belong neither to class nor object, it is located inside class
+# for comfort.It is static method, above it stays @staticmethod and do es not have initial parameter 
+# self or cls.
+print('StaticMethodPart')
+class Walmart:
+	@staticmethod
+	def commercial():
+		print('This service is provided by Walart')
+Walmart.commercial()		# Notice that we must not create object in order use method.
