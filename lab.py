@@ -189,3 +189,18 @@ second = Word('HA')
 third = Word('eh')
 print(first.equals(second))
 print(first.equals(third))
+
+# we have wrote method equals which lowers and compares. It would be nice to do it like
+# frist == second as we do in built-in types.
+print(' --------- __eq__ ------------')
+class Word():
+	def __init__(self,text):
+		self.text = text
+	def __eq__(self,word2):		# We erite __eq__ func and define logic, then == executes this logic
+		return self.text.lower() == word2.text.lower()
+
+first = Word('ha')
+second = Word('HA')
+third = Word('eh')
+print(first == second)
+print(first == third)
