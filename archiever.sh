@@ -14,10 +14,10 @@ backup_month=$cur_year-0$prev_month
 echo $backup_month
 
 for i in {01..31}; do mkdir $backup_month-$i ; done
-for i in {01..31}; do sshpass -p '112WEBnGinxserverpr00tp@$$' scp -rv 10.44.3.60:/var/www/html/$backup_month-$i-*  ./$backup_month-$i ; done
+for i in {01..31}; do sshpass -p 'remote_ssh_pass' scp -rv remote_ssh_server:/var/www/html/$backup_month-$i-*  ./$backup_month-$i ; done
 
 find  /htmlnfs/archieve-$(date +%B -d "1 month ago")  -type f -print  >  files
 tar cjvf ../$backup_month-records.tar.bz2 --files-from files
 cd ..
-curl -T `ls *.tar.bz2`   ftp://ftp112:F112tp123@10.44.1.100/
+curl -T `ls *.tar.bz2`   ftp://ftpuser:ftppass@10.44.1.100/
 
