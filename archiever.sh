@@ -13,7 +13,7 @@ prev_month=$(expr $cur_month - 1)
 backup_month=$cur_year-0$prev_month
 echo $backup_month
 
-for i  in {01..02} ; do sshpass -p 'password_here'  scp -rv remote_linux_server:/var/www/html/$backup_month-$i-* . ; done
+for i  in {01..31} ; do sshpass -p 'password_here'  scp -rv remote_linux_server:/var/www/html/$backup_month-$i-* . ; done
 
 find  . -type f -print  >  files
 tar cjvf $backup_month-records.tar.bz2 --files-from files
