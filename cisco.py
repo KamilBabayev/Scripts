@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # This script is example to automate config provisioning of
 # cisco switch interfaces via python paramiko module.
+# We can gather command groups in some list and iterae this list
+# inside function in order to shorten our code. I will rewrite this.
 import paramiko
 import time
 from getpass import getpass
