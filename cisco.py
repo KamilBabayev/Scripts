@@ -3,9 +3,11 @@
 # cisco switch interfaces via python paramiko module.
 import paramiko
 import time
+from getpass import getpass
 
 username='cisco'
 password='cisco'
+# or comment above line and use -  password = getpass()  - to hide password
 router_ip='10.94.65.211'
 interfaces = [13,14,15]
 
