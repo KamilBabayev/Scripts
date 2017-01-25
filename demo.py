@@ -6,21 +6,21 @@ start_time = datetime.now()
 print("Script started at: ", start_time)
 
 sw2960 = {
-	'device_type':'demo_ios', 
+	'device_type':'cisco_ios', 
 	'ip':'192.168.5.57', 
 	'username':'demo123', 
 	'password': 'demo123'
 }
 
 sw2950 = {
-    'device_type':'demo_ios',
+    'device_type':'cisco_ios',
     'ip':'192.168.5.57',
     'username':'demo123',
     'password': 'demo123'
 }
 
 sw6500 = {
-	'device_type':'demo_ios',
+	'device_type':'cisco_ios',
 	'ip':	'192.168.5.111',
 	'username': 'demo123',
 	'password': 'demo123',
