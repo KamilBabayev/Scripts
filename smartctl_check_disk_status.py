@@ -35,6 +35,7 @@ for N in disks:
     p=subprocess.Popen(["smartctl",  "-a", "-d", megaraid,  "/dev/sda", "-H"], stdout=subprocess.PIPE)
     (output, err) = p.communicate()
     result = re.findall(r'SMART overall-health\s\S+\s\S+\s\S+\s\S+', output)
+    print megaraid + ":  ", result
     status = str(result).split(':')
     status =  status[1].rstrip("']").lstrip(' ')
     if status != "PASSED":
