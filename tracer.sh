@@ -7,6 +7,7 @@ trace_service01(){
     tcpdump -i any -nn host 10.10.10.11 -w $tracefile
     echo "Result has been saved to -> " $tracefile
 }
+
 trace_service02(){
     tracefile="/tmp/service02_trace_$(date +%F).pcap"
     tcpdump -i any -nn host 10.10.10.12 -w $tracefile
@@ -15,6 +16,7 @@ trace_service02(){
 
 
 echo "Which one to trace ?"
+
 select i in service01 service02
 do
     case $i in
@@ -23,6 +25,7 @@ do
             trace_service01
             exit 0
             ;;
+
         service02)
             echo "Tracing Service02.... press Ctrl+C when you want to stop"
             trace_service02
