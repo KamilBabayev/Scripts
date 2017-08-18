@@ -4,12 +4,12 @@
 
 trace_service01(){
     tracefile="/tmp/service01_trace_$(date +%F).pcap"
-    tcpdump -i any -nn host 10.10.10.11 -w /tmp/service01_trace_$(date +%F).pcap
+    tcpdump -i any -nn host 10.10.10.11 -w $tracefile
     echo "Result has been saved to -> " $tracefile
 }
 trace_service02(){
     tracefile="/tmp/service02_trace_$(date +%F).pcap"
-    tcpdump -i any -nn host 10.10.10.12 -w /tmp/service02_trace_$(date +%F).pcap
+    tcpdump -i any -nn host 10.10.10.12 -w $tracefile
     echo "Result has been saved to -> " $tracefile
 }
 
